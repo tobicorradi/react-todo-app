@@ -20,10 +20,12 @@ const Form = ({ tasks, setTasks, inputTask, setInputTask }) => {
         onChange={(e) => setInputTask(e.target.value)}
         className="form__input"
         type="text"
-        placeholder="'Buy Bread...'"
+        placeholder='"Learn how to code at 16.40"'
         value={inputTask}
       />
-      <input onClick={submitHandler} className="form__btn" type="submit" />
+      <button onClick={submitHandler} className="form__btn" type="submit">
+        <img src="add.png" alt="" />
+      </button>
     </form>
   );
 };

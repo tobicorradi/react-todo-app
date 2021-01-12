@@ -10,6 +10,9 @@
   margin-bottom: 12px;
   position: relative;
 }
+.completed p {
+  text-decoration: line-through;
+}
 .completed::before {
   content: "";
   position: absolute;
@@ -21,6 +24,7 @@
 .task__main {
   display: flex;
   align-items: center;
+  max-width: 230px;
 }
 .task__input,
 .task__btn {
@@ -29,4 +33,18 @@
 .task input,
 .task button {
   cursor: pointer;
+}
+.task__btn {
+  border: 0;
+  padding: 10px;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+}
+.task__text {
+  word-break: break-all;
+}
+.edit-btn {
+  background-color: #fff;
+  margin-right: 15px;
 }

@@ -29,7 +29,7 @@ const Task = ({ text, task, tasks, setTasks }) => {
         <p className="task__text">{text}</p>
       </div>
       <div className="task__buttons">
-        <button className="task__btn">Editar</button>
+        <button className="edit-btn task__btn">Editar</button>
         <button onClick={deleteHandler} className="task__btn">
           Eliminar
         </button>
