@@ -8,6 +8,15 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin-bottom: 12px;
+  position: relative;
+}
+.completed::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: rgb(0, 202, 0);
+  left: 0;
 }
 .task__main {
   display: flex;

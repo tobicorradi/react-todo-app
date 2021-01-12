@@ -5,10 +5,19 @@ import "./App.css";
 const App = () => {
   const [inputTask, setInputTask] = useState("");
   const [tasks, setTasks] = useState([
-    // {
-    //   id: 2,
-    //   text: "I am an example",
-    // },
+    {
+      id: 1,
+      text: "I am an example",
+      isCompleted: true,
+    },
+    {
+      id: 2,
+      text: "Hi!",
+    },
+    {
+      id: 3,
+      text: "Wow",
+    },
   ]);
   return (
     <div className="app">

@@ -4,6 +4,9 @@
   font-family: Roboto, "sans-seriff";
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(245, 245, 245);
+}
 ul,
 ol {
   list-style: none;
@@ -14,12 +17,13 @@ h1 {
 }
 h1 span {
   font-size: 13px;
+  font-weight: 400;
 }
 .app {
   max-width: 500px;
   padding: 30px;
   min-height: 100vh;
-  background-color: rgb(245, 245, 245);
+  margin: 0 auto;
 }
 .no-tasks {
   text-align: center;

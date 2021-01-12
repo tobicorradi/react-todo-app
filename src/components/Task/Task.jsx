@@ -4,11 +4,28 @@ const Task = ({ text, task, tasks, setTasks }) => {
   const deleteHandler = () => {
     setTasks(tasks.filter((element) => element.id !== task.id));
   };
-  const completeTask = () => {};
+  const completeTask = () => {
+    setTasks(
+      tasks.map((element) => {
+        if (element.id == task.id) {
+          return {
+            ...element,
+            isCompleted: !element.isCompleted,
+          };
+        }
+        return element;
+      })
+    );
+  };
   return (
-    <li className="task">
+    <li className={`task ${task.isCompleted ? "completed" : null}`}>
       <div className="task__main">
-        <input onClick={completeTask} className="task__input" type="checkbox" />
+        <input
+          onClick={completeTask}
+          defaultChecked={task.isCompleted}
+          className="task__input"
+          type="checkbox"
+        />
         <p className="task__text">{text}</p>
       </div>
       <div className="task__buttons">
