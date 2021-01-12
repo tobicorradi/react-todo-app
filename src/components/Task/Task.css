@@ -34,7 +34,7 @@
 .task button {
   cursor: pointer;
 }
-.task__btn {
+.btn {
   border: 0;
   padding: 10px;
   border-radius: 4px;

@@ -19,6 +19,9 @@ const App = () => {
       text: "Wow",
     },
   ]);
+  const deleteAll = () => {
+    setTasks([]);
+  };
   return (
     <div className="app">
       <h1>
@@ -36,7 +39,12 @@ const App = () => {
           <p>No tasks added</p>
         </div>
       ) : (
-        <List tasks={tasks} setTasks={setTasks} />
+        <>
+          <List tasks={tasks} setTasks={setTasks} />
+          <button class="danger-btn btn" onClick={deleteAll}>
+            Delete all tasks
+          </button>
+        </>
       )}
     </div>
   );
