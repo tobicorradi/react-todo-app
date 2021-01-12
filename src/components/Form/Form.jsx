@@ -9,8 +9,9 @@ const Form = ({ tasks, setTasks, inputTask, setInputTask }) => {
         text: inputTask,
         isCompleted: false,
       },
-      ...tasks
+      ...tasks,
     ]);
+    console.log(tasks);
     setInputTask("");
   };
   return (

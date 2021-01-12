@@ -1,11 +1,17 @@
 import React from "react";
 import Task from "../Task";
 import "./List.css";
-const List = ({ tasks }) => {
+const List = ({ tasks, setTasks }) => {
   return (
     <ul className="list">
       {tasks.map((task) => (
-        <Task text={task.text} />
+        <Task
+          key={task.id}
+          text={task.text}
+          task={task}
+          tasks={tasks}
+          setTasks={setTasks}
+        />
       ))}
     </ul>
   );

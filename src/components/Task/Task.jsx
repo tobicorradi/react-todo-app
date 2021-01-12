@@ -1,6 +1,9 @@
 import React from "react";
 import "./Task.css";
-const Task = ({ text }) => {
+const Task = ({ text, task, tasks, setTasks }) => {
+  const deleteHandler = () => {
+    setTasks(tasks.filter((element) => element.id !== task.id));
+  };
   return (
     <li className="task">
       <div className="task__main">
@@ -9,7 +12,9 @@ const Task = ({ text }) => {
       </div>
       <div className="task__buttons">
         <button className="task__btn">Editar</button>
-        <button className="task__btn">Eliminar</button>
+        <button onClick={deleteHandler} className="task__btn">
+          Eliminar
+        </button>
       </div>
     </li>
   );

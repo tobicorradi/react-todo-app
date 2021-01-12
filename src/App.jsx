@@ -22,7 +22,7 @@ const App = () => {
           alt=""
         />
       ) : (
-        <List tasks={tasks} />
+        <List tasks={tasks} setTasks={setTasks} />
       )}
     </div>
   );
