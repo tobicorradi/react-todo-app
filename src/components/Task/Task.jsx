@@ -4,10 +4,11 @@ const Task = ({ text, task, tasks, setTasks }) => {
   const deleteHandler = () => {
     setTasks(tasks.filter((element) => element.id !== task.id));
   };
+  const completeTask = () => {};
   return (
     <li className="task">
       <div className="task__main">
-        <input className="task__input" type="checkbox" />
+        <input onClick={completeTask} className="task__input" type="checkbox" />
         <p className="task__text">{text}</p>
       </div>
       <div className="task__buttons">
